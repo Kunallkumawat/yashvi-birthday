@@ -116,8 +116,23 @@ footer{text-align:center;padding:30px 15px 45px;color:#9b7b9c;font-size:.85rem}
 <footer>Made with endless love, just for Yashvi ✨<br>02.01.2026 — our story began 💗</footer>
 <div id="lightbox"><button aria-label="Close image">×</button><img alt="Our memory"></div>
 <script>
-const photos = ['photos/memory-01.jpg', 'photos/memory-02.jpg', 'photos/memory-03.jpg', 'photos/memory-04.jpg', 'photos/memory-05.jpg', 'photos/memory-06.jpg', 'photos/memory-07.jpg', 'photos/memory-08.jpg', 'photos/memory-09.jpg', 'photos/memory-10.jpg', 'photos/memory-11.jpg', 'photos/memory-12.jpg', 'photos/memory-13.jpg', 'photos/memory-14.jpg', 'photos/memory-15.jpg'];
-const captions = ["A little sparkle, a lot of you ✨","One of my favourite frames 💗","My favourite kind of togetherness","A moment I want to keep forever","Just us, being us 🥰","A memory close to my heart","Your smile, my happy place","A little moment, a big feeling","The world feels softer with you","My favourite person, always","Pretty moments with my pretty girl","A frame full of love","More memories to come 💜","You make every place brighter","Us — and that's my favourite"];
+const photos = [
+'memory-01.jpg',
+'memory-02.jpg',
+'memory-03.jpg',
+'memory-04.jpg',
+'memory-05.jpg',
+'memory-06.jpg',
+'memory-07.jpg',
+'memory-08.jpg',
+'memory-09.jpg',
+'memory-10.jpg',
+'memory-11.jpg',
+'memory-12.jpg',
+'memory-13.jpg',
+'memory-14.jpg',
+'memory-15.jpg'
+];const captions = ["A little sparkle, a lot of you ✨","One of my favourite frames 💗","My favourite kind of togetherness","A moment I want to keep forever","Just us, being us 🥰","A memory close to my heart","Your smile, my happy place","A little moment, a big feeling","The world feels softer with you","My favourite person, always","Pretty moments with my pretty girl","A frame full of love","More memories to come 💜","You make every place brighter","Us — and that's my favourite"];
 const gallery=document.getElementById('gallery');
 photos.forEach((src,i)=>{const fig=document.createElement('figure');fig.className='photo';fig.style.setProperty('--r',`${[-1.2,.8,-.5,1.1][i%4]}deg`);fig.innerHTML=`<img src="${src}" alt="Memory ${i+1}" loading="lazy"><figcaption>${captions[i]||"A favourite memory 💗"}</figcaption>`;fig.addEventListener('click',()=>showPhoto(src));gallery.appendChild(fig)});
 const envelope=document.getElementById('envelope'), wrap=document.getElementById('envelopeWrap'), letter=document.getElementById('letterSection');
